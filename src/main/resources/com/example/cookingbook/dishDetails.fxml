@@ -1,0 +1,24 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<VBox fx:id="root" prefHeight="707.0" prefWidth="845.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cookingbook.controller.DishDetailsController">
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+    <HBox alignment="CENTER" spacing="10">
+        <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="CookingBook" />
+    </HBox>
+
+    <TextArea fx:id="nameTextArea" prefHeight="20.0" prefWidth="735.0" promptText="Название блюда" />
+    <TextArea fx:id="cookingTimeTextArea" prefHeight="20.0" prefWidth="735.0" promptText="Время приготовления" />
+    <TextArea fx:id="ingredientsTextArea" prefHeight="200.0" prefWidth="735.0" promptText="Ингредиенты" />
+
+    <!-- Область для процесса приготовления -->
+    <ScrollPane prefHeight="300.0" prefWidth="735.0">
+        <TextArea fx:id="cookingProcessTextArea" prefHeight="300.0" prefWidth="735.0" promptText="Процесс приготовления" />
+    </ScrollPane>
+
+    <CheckBox fx:id="favoriteCheckBox" text="Любимое блюдо" />
+
+    <Button onAction="#saveChanges" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Сохранить" />
+</VBox>
